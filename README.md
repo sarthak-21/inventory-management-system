@@ -18,6 +18,7 @@ This project contains all the functionalities.
 * User can purchase a new product.
 * Generates an Invoice on every purchase.
 * Updates the stock quantity after the sale of a product. Sends a message to restock the item, when its _quantity = 0_.
+* User can update a field of an existing product.
 
 ## Product Features
 The record.json contains:
@@ -61,7 +62,7 @@ record.json file is updated with the new product information.
 
 Using the _product_id_ an entry is removed. The entry with product_id _1031_ is not present in the list.
 
-### 4. Purchasing a product
+### 5. Purchasing a product
 ![picture alt](Screenshots/7.jpg)
 
 Enter the product_id and the quantity. If that quantity is in stock then an invoice is generated with the billing date, time of purchase and other details of the product purschased. 
@@ -70,3 +71,12 @@ Inside, records.json the quantity of that particular product gets updated by _re
 ![picture alt](Screenshots/8.jpg)
 
 The invoice is pushed to the sales.json with an order id.
+
+### 6. Editing a specific field
+![picture alt](Screenshots/9.jpg)
+
+Add the _prod_id_ of the product to be updated, it checks if the product exists in the stock list. Then, enter the field, it checks if the field is vaild.
+
+![picture alt](Screenshots/10.jpg)
+
+And pushes the change to the record.json file. This feature is of great help in case of restocking a product.
